@@ -1,1 +1,4 @@
-console.log("It works!");
+import { displayHomepage } from "./homepage.js";
+import './style.css';
+
+displayHomepage();
