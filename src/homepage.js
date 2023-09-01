@@ -2,21 +2,25 @@ import Cafe from './cafe.jpg';
 
 function displayHomepage () {
   const content = document.querySelector("#content");
+  const homepageContainer = document.createElement("div");
+  homepageContainer.setAttribute("id", "homepage-container");
+
+  content.appendChild(homepageContainer);
 
   const restaurantName = document.createElement("h1");
   restaurantName.textContent = "SUNRISE CAFE";
 
-  content.appendChild(restaurantName);
+  homepageContainer.appendChild(restaurantName);
 
   const cafeImage = document.createElement("img");
   cafeImage.src = Cafe;
 
-  content.appendChild(cafeImage);
+  homepageContainer.appendChild(cafeImage);
 
   const restaurantTagline = document.createElement("h3");
   restaurantTagline.textContent = "Enjoy breakfast with a view like no other!";
 
-  content.appendChild(restaurantTagline);
+  homepageContainer.appendChild(restaurantTagline);
 };
 
 export { displayHomepage };
