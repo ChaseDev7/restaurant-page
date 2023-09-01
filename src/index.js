@@ -27,7 +27,7 @@ navBar.appendChild(homePageBtn);
 navBar.appendChild(menuBtn);
 navBar.appendChild(contactBtn);
 
-homePageBtn.addEventListener("click", displayHomepage);
+homePageBtn.addEventListener("click", displayHomepageContainer);
 menuBtn.addEventListener("click", displayMenuContainer);
 
 displayHomepage();
@@ -42,5 +42,12 @@ function displayMenuContainer () {
   content.innerHTML = "";
   content.appendChild(navBar);
   displayMenu();
+  content.appendChild(disclaimerBox);
+}
+
+function displayHomepageContainer () {
+  content.innerHTML = "";
+  content.appendChild(navBar);
+  displayHomepage();
   content.appendChild(disclaimerBox);
 }

@@ -56,7 +56,7 @@ button:hover {
   align-items: center;
 }
 
-#homepage-container {
+#homepage-container, #menu-container {
   border-radius: 20px;
   width: 100%;
   background-color: var(--content-background);
@@ -72,7 +72,6 @@ img {
 
 h1 {
   font-size: 40px;
-  border-left: 7px solid var(--light-blue);
   padding: 0 15px;
 }
 
@@ -92,7 +91,7 @@ h3 {
 #restaurant-info {
   width: 80%;
   color: var(--dark-blue);
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   font-size: 20px;
   line-height: 30px;
 }
@@ -101,26 +100,50 @@ h3 {
   padding: 20px;
   border: 2px solid var(--dark-blue);
   color: var(--dark-blue);
-  font-size: 17px;
+  font-size: 10px;
   font-weight: 700;
   margin: 15px 0;
   border-radius: 10px;
-  width: 70%
+  width: 60%
 }
 
 .menu-item {
-  width: 70%;
-  border: 2px solid  var(--dark-blue);
+  width: 60%;
+  border: 2px solid var(--dark-blue);
   border-radius: 20px;
-  padding: 30px;
-  margin: 15px 0;
+  padding: 20px;
+  margin: 15px 0 25px 0;
+  display: flex;
+  box-shadow: -5px 5px 10px 1px gray;
+}
+
+.menu-item-container {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-name {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 0 5px 5px;
+  border-left: 7px solid var(--light-blue);
+  border-bottom: 3px solid var(--light-blue);
+}
+
+.menu-item-price {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-style: italic;
 }
 
 .menu-image {
-  width: 50%;
+  width: 150px;
+  height: 150px;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 600px) {
   button {
     font-size: 15px;
     padding: 0 10px;
@@ -134,5 +157,34 @@ h3 {
 
   #nav-bar {
     height: 30px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .menu-item-container {
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  #content {
+    width: 100%;
+  }
+
+  #nav-bar, #homepage-container, #menu-container {
+    border-radius: 0;
+  }
+
+  #nav-bar {
+    border-top: none;
   }
 }
