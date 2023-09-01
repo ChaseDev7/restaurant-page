@@ -108,6 +108,18 @@ h3 {
   width: 70%
 }
 
+.menu-item {
+  width: 70%;
+  border: 2px solid  var(--dark-blue);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 15px 0;
+}
+
+.menu-image {
+  width: 50%;
+}
+
 @media (max-width: 570px) {
   button {
     font-size: 15px;

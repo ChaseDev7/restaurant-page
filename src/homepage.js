@@ -1,7 +1,11 @@
 import Cafe from './cafe.jpg';
 
 function displayHomepage () {
+  const body = document.querySelector("body");
   const content = document.querySelector("#content");
+
+  body.appendChild(content);
+
   const homepageContainer = document.createElement("div");
   homepageContainer.setAttribute("id", "homepage-container");
 
